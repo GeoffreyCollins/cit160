@@ -16,9 +16,15 @@ public class Journal {
         string userResponse = Console.ReadLine();
         return userResponse;
     }
+
     public void Display()
     {
         Console.WriteLine($"Date: 1/28/2023 - Entry: {Write()}");
     }
     
+    public static async Task Save()
+    {
+        string[] entries = {};
+        await File.WriteAllLinesAsync("journal.txt",entries);
+    }
 }
