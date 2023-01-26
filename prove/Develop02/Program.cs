@@ -14,23 +14,23 @@ class Program
         Console.WriteLine("4. Save ");
         Console.WriteLine("5. Quit"); 
         Console.Write("What would you like to do? ");
-        userChoice = int.Parse(Console.ReadLine());
-        if (userChoice == 1)
+        while (userChoice != 5)
         {
-            Journal write1 = new Journal();
-            write1.Write();
-        }  
-        if (userChoice == 2)
-        {
-            Journal myJournal = new Journal();
-            Journal write1 = new Journal();                
-            myJournal._journalEntries.Add(write1);
-            myJournal.Display();
-        }
-        else 
-        {
+            userChoice = int.Parse(Console.ReadLine());
+            if (userChoice == 1)
+            {
+                Entry write1 = new Entry();
+                write1.Write();
+            }  
+            if (userChoice == 2)
+            {
+                Entry display1 = new Entry();
+                display1.Display();
+            }
+            if (userChoice == 5)
+            {
             Console.WriteLine("Thank you for using the journal program. Goodbye.");
+            }
         }
-        
     }      
 }
