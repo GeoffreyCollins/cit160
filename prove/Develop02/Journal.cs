@@ -11,8 +11,8 @@ public class Journal {
                             "Is there anything that needs to be done today to prepare for tomorrow? "};
         Random rand = new Random();
         int index = rand.Next(prompts.Length);
-        Console.WriteLine($"{prompts[index]} ");
-        Console.ReadLine();
+        Console.WriteLine($"Date: 01/28/2023 - Prompt: {prompts[index]} ");
+        string userResponse = Console.ReadLine();
 
     }
 }
