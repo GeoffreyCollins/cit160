@@ -15,14 +15,22 @@ class Program
         Console.WriteLine("5. Quit"); 
         Console.Write("What would you like to do? ");
         userChoice = int.Parse(Console.ReadLine());
-        
-        while (userChoice != 5)
+        if (userChoice == 1)
         {
-            if (userChoice == 1)
-            {
-                Journal write1 = new Journal();
-                write1.Write();
-            }
+            Journal write1 = new Journal();
+            write1.Write();
+        }  
+        if (userChoice == 2)
+        {
+            Journal myJournal = new Journal();
+            Journal write1 = new Journal();                
+            myJournal._journalEntries.Add(write1);
+            myJournal.Display();
         }
+        else 
+        {
+            Console.WriteLine("Thank you for using the journal program. Goodbye.");
+        }
+        
     }      
 }

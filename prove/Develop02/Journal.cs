@@ -1,7 +1,8 @@
 using System;
 
 public class Journal {
-    public void Write()
+    public List<Journal> _journalEntries = new List<Journal>();
+    public string Write()
     {
         // The list of random prompts for the user 
         string[] prompts = {"What would you have done differently today? ", 
@@ -13,6 +14,11 @@ public class Journal {
         int index = rand.Next(prompts.Length);
         Console.WriteLine($"Date: 01/28/2023 - Prompt: {prompts[index]} ");
         string userResponse = Console.ReadLine();
-        
+        return userResponse;
     }
+    public void Display()
+    {
+        Console.WriteLine($"Date: 1/28/2023 - Entry: {Write()}");
+    }
+    
 }
