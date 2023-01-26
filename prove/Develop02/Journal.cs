@@ -1,11 +1,12 @@
 using System;
 
 public class Journal {
-    public List<Journal> _journalEntries = new List<Journal>();
-    
-    public static async Task Save()
+    public List<Journal> _entries = new List<Journal>();
+    public void Display()
     {
-        string[] entries = {};
-        await File.WriteAllLinesAsync("journal.txt",entries);
+        foreach (Journal entry in _entries)
+        {
+            Console.WriteLine($"Date: 01/28/2023 - Prompt: {_entries}");
+        }
     }
 }
