@@ -24,7 +24,8 @@ class Program
             }  
             if (userChoice == 2)
             {
-                
+                Journal display1 = new Journal();
+                display1.Display();
             }
             if (userChoice == 3)
             {

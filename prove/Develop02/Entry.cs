@@ -23,4 +23,18 @@ public class Entry {
             entry.Display();
         }
     }
+    public void Save()
+    {
+        StreamWriter fileWriter = new StreamWriter(File.OpenWrite("journal.txt"));
+        fileWriter.Write(Write());
+    }
+    public void Load()
+    {
+        string[] textFileLines = System.IO.File.ReadAllLines("prove/Develop02/journal.txt"); 
+        System.Console.WriteLine("Contents of Entry");
+        foreach (string line in textFileLines)
+        {
+            Console.WriteLine("\t" + line);
+        }
+    }
 }
