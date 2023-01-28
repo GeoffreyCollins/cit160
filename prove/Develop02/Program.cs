@@ -29,7 +29,13 @@ class Program
             }
             if (userChoice == 3)
             {
-                
+                Entry load1 = new Entry();
+                load1.Load();
+            }
+            if (userChoice == 4)
+            {
+                Entry write1 = new Entry();
+                write1.Save();
             }
             if (userChoice == 5)
             {
