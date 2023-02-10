@@ -27,7 +27,13 @@ class Scripture
 
     public bool HideWords(int count)
     {
-        
+        foreach(Verse verse in _verses)
+        {
+            if (_hidden == true)
+            {
+                Console.Write("_");
+            }
+        }
         return false;
     }
 
