@@ -12,13 +12,17 @@ class Scripture
         foreach(string verseStr in verses)
         {
             Verse verse = new Verse(verseStr);
-            _verses.Add(verseStr);
+            _verses.Add(verse);
         }
     }
 
     public void Display()
     {
-        verse.Display();
+        foreach(Verse verse in _verses)
+        {
+            verse.Display();
+        }
+        
     }
 
     public bool HideWords(int count)
