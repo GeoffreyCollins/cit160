@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Please press 'enter' to continue or type 'quit' to finish:");
-
+        Console.Write("John 4:14 - ");
         List<string> verses = new List<string>
         {
             "But whosoever drinketh of the water that I shall give him",

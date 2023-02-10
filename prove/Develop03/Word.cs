@@ -25,6 +25,7 @@ class Word
     
     public bool isHidden()
     {
+        Console.Clear();
         return _hidden;
     }
 }

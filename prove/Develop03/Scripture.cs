@@ -6,7 +6,7 @@ using System;
 class Scripture 
 {
     private List<Verse> _verses = new List<Verse>();
-
+    private bool _hidden = false;
     public Scripture(List<string> verses)
     {
         foreach(string verseStr in verses)
@@ -27,11 +27,12 @@ class Scripture
 
     public bool HideWords(int count)
     {
+        
         return false;
     }
 
     public bool IsAllHidden()
     {
-        return false;
+        return _hidden;
     }
 }
