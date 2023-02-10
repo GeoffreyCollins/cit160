@@ -21,7 +21,7 @@ class Journal
         }
     }
 
-    public void Load()
+    public void Load(string filename)
     {
         _entries.Clear();
 
