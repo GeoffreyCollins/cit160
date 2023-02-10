@@ -1,46 +1,49 @@
 using System;
 
-
 class Program
 {
     static void Main(string[] args)
-    {   
-        Console.WriteLine("Welcome to the Journal Program!");
-        int userChoice = -1;
-        while (userChoice != 5)
+    {
+        Journal journal = new Journal();
+        Menu menu = new Menu();
+        PromptManager promptMan = new PromptManager();
+
+        string filename = "";
+
+        int choice = -1;
+        while (choice != 5) 
         {
-            Console.WriteLine("Please enter one of the following choices: ");
-            Console.WriteLine("1. Write ");
-            Console.WriteLine("2. Display ");            
-            Console.WriteLine("3. Load ");
-            Console.WriteLine("4. Save ");
-            Console.WriteLine("5. Quit"); 
-            Console.Write("What would you like to do? ");
-            userChoice = int.Parse(Console.ReadLine());
-            if (userChoice == 1)
+            menu.Display();
+            choice = Convert.ToInt32(Console.ReadLine());
+            switch (choice)
             {
-                Entry write1 = new Entry();
-                string userEntry = write1.Write();
-            }  
-            if (userChoice == 2)
-            {
-                Journal display1 = new Journal();
-                display1.Display();
-            }
-            if (userChoice == 3)
-            {
-                Entry load1 = new Entry();
-                load1.Load();
-            }
-            if (userChoice == 4)
-            {
-                Entry write1 = new Entry();
-                write1.Save();
-            }
-            if (userChoice == 5)
-            {
-            Console.WriteLine("Thank you for using the journal program. Goodbye.");
+                case 1:
+                    string prompt = promptMan.GetPrompt();
+                    System.Console.WriteLine(prompt);
+                    string input = Console.ReadLine();
+                    Entry entry = new Entry();
+
+                    DateTime thisDay = DateTime.Today;
+                    entry._date = thisDay.ToShortDateString();
+                    entry._entry = input;
+                    entry._prompt = prompt;
+
+                    journal.AddEntry(entry);
+                    break;
+                case 2:
+                    journal.Display();
+                    break;
+                case 3:
+                    System.Console.Write("Enter FileName to load journal");
+                    filename = Console.ReadLine();
+                    journal.Load(filename);
+                    break;
+                case 4:
+                    System.Console.WriteLine("Enter FileName to Save journal");
+                    filename = Console.ReadLine();
+                    journal.Save(filename);
+                    break;
             }
         }
-    }      
+    }
 }
