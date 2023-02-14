@@ -27,18 +27,18 @@ class Scripture
 
     public bool HideWords(int count)
     {
-        foreach(Verse verse in _verses)
+        foreach (Verse verse in _verses)
         {
-            if (_hidden == true)
+            if (!(IsAllHidden()))
             {
-                Console.Write("_");
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     public bool IsAllHidden()
     {
-        return _hidden;
+        return false;
     }
 }

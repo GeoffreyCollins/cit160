@@ -25,6 +25,6 @@ class Word
     
     public bool isHidden()
     {
-        return _hidden;
+        return false;
     }
 }
