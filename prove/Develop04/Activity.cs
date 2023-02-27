@@ -33,21 +33,33 @@ class Activity
 
     public void DisplayDelay(int delay) 
     {
-        int delta = 10;
-        double time = delay * 1000;
-        while (time < 0)
+        List<string> animationStrings = new List<string>();
+        animationStrings.Add("|");
+        animationStrings.Add("/");
+        animationStrings.Add("-");
+        animationStrings.Add("\\");
+        animationStrings.Add("|");
+        animationStrings.Add("/");
+        animationStrings.Add("-");
+        animationStrings.Add("\\");
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(10);
+
+        int i = 0;
+
+        while (DateTime.Now < endTime)
         {
-            Console.WriteLine("/");
-            Thread.Sleep(delta);
-            time -= delta;
-            Console.WriteLine("\b\b");
-            Console.WriteLine("--");
-            Thread.Sleep(delta);
-            Console.WriteLine("\b\b");
-            Console.WriteLine("\\");
-            Thread.Sleep(delta);
-            time -= delta;
-            Console.WriteLine("\b\b");
+            string s = animationStrings[i];
+            Console.Write(s);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+            i++;
+
+            if (i >= animationStrings.Count)
+            {
+                i = 0;
+            }
         }
     }
 }
