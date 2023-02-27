@@ -16,7 +16,7 @@ class BreathingActivity : Activity
         
     }
 
-    public void DoTheThing()
+    public void DoActivity()
     {
        Console.WriteLine("Get ready....");
        DisplayDelay(5);
