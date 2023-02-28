@@ -17,13 +17,11 @@ class Program
             {
                 case 1:
                     BreathingActivity breath = new BreathingActivity(30);
-                    breath.DisplayWelcome();
-                    Console.WriteLine();
-                    breath.DisplayDesc();
-                    Console.WriteLine();
                     breath.DoActivity();
-                    Console.WriteLine();
-                    breath.DisplayEnding();
+                    break;
+                case 2:
+                    ReflectionActivity reflect = new ReflectionActivity(30);
+                    reflect.DoActivity();
                     break;
             }
         }

@@ -43,6 +43,10 @@ class BreathingActivity : Activity
     }
     public void DoActivity()
     {
+        DisplayWelcome();
+        Console.WriteLine();
+        DisplayDesc();
+        Console.WriteLine();
         Console.Write("Please enter, in seconds, a duration for the activity: ");
         int duration = Convert.ToInt32(Console.ReadLine());
         DisplayDelay(5);
@@ -53,6 +57,9 @@ class BreathingActivity : Activity
         Console.WriteLine();
         Console.Write("Breathe out....");
         DisplayInstructions(4);
+        Console.WriteLine();
+        Console.WriteLine();
+        DisplayEnding();
     }
     
 }
