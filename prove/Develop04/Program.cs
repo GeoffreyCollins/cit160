@@ -17,8 +17,13 @@ class Program
             {
                 case 1:
                     BreathingActivity breath = new BreathingActivity(30);
-                    breath.Display();
+                    breath.DisplayWelcome();
+                    Console.WriteLine();
+                    breath.DisplayDesc();
+                    Console.WriteLine();
                     breath.DoActivity();
+                    Console.WriteLine();
+                    breath.DisplayEnding();
                     break;
             }
         }

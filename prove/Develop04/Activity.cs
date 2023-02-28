@@ -22,13 +22,19 @@ class Activity
         _duration = duration;
     }
 
-    public void Display()
+    public void DisplayDesc()
     {
-        System.Console.WriteLine(_name);
         System.Console.WriteLine(_desc);
+    }
+
+    public void DisplayWelcome()
+    {
         System.Console.WriteLine(_welcomeMessage);
+    }
+
+    public void DisplayEnding()
+    {
         System.Console.WriteLine(_endingMessage);
-        System.Console.WriteLine(_duration);
     }
 
     public void DisplayDelay(int delay) 
@@ -44,7 +50,7 @@ class Activity
         animationStrings.Add("\\");
 
         DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(10);
+        DateTime endTime = startTime.AddSeconds(5);
 
         int i = 0;
 
