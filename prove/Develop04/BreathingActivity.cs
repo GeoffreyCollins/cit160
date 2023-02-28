@@ -50,6 +50,7 @@ class BreathingActivity : Activity
         Console.Write("Please enter, in seconds, a duration for the activity: ");
         int duration = Convert.ToInt32(Console.ReadLine());
         DisplayDelay(5);
+        Console.Clear();
         Console.WriteLine("Get ready....");
         Console.WriteLine();
         Console.Write("Now breathe in...");

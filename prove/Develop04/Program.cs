@@ -23,6 +23,13 @@ class Program
                     ReflectionActivity reflect = new ReflectionActivity(30);
                     reflect.DoActivity();
                     break;
+                case 3:
+                    ListingActivity list = new ListingActivity(30);
+                    list.DoActivity();
+                    break;
+                case 4:
+                    Console.WriteLine("Thank you for your time. Good day.");
+                    break;
             }
         }
     }
