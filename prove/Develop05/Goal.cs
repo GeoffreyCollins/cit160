@@ -2,6 +2,7 @@ using System;
 
 class Goal
 {
+    public int _points = 0;
     public string _goalName = "";
     public List<Goal> _goals = new List<Goal>();
     public void AddGoal()
@@ -11,19 +12,19 @@ class Goal
         Console.WriteLine("    2. Eternal Goal");
         Console.WriteLine("    3. Checklist Goal");
 
-        Console.WriteLine("Which type of goal would you like to create?");
+        Console.Write("Which type of goal would you like to create?");
         string typeGoal = Console.ReadLine();
 
-        Console.WriteLine("What is the name of your goal?");
+        Console.Write("What is the name of your goal?");
         string nameOfGoal = Console.ReadLine();
 
-        Console.WriteLine("What is a short description of your goal?");
+        Console.Write("What is a short description of your goal?");
         string descriptionGoal = Console.ReadLine();
 
-        Console.WriteLine("How many points will there be associated with this goal?");
+        Console.Write("How many points will there be associated with this goal?");
         int points = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("How many times does this goal need to be completed to get a bonus?");
+        Console.Write("How many times does this goal need to be completed to get a bonus?");
         int pointBonus = Convert.ToInt32(Console.ReadLine());
 
         
@@ -60,5 +61,18 @@ class Goal
             goal._goalName = parts[0];
             _goals.Add(goal);
         }
+    }
+
+    public void RecordEvent()
+    {
+        Console.WriteLine("The goals are:");
+        foreach (Goal goal in _goals)
+        {
+            Console.WriteLine($"{_goalName}");
+            Console.WriteLine();
+        }
+        Console.Write("Which goal did you accomplish?");
+        Console.ReadLine();
+        Console.WriteLine($"Congratulations! You received {_points} points!");
     }
 }

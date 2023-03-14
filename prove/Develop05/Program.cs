@@ -37,6 +37,7 @@ class Program
                     goal.LoadGoal(filename);
                     break;
                 case 5:
+                    goal.RecordEvent();
                     break;
                 case 6:
                     Console.WriteLine("Thank you for using the goal program. Goodbye.");
