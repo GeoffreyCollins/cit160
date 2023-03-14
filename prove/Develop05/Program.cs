@@ -21,9 +21,10 @@ class Program
             switch (userChoice)
             {
                 case 1:
-                    
+                    goal.AddGoal();
                     break;
                 case 2:
+                    goal.DisplayList();
                     break;
                 case 3:
                     Console.WriteLine("Please enter the filename that you would like to save to: ");

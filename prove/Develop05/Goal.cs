@@ -31,8 +31,11 @@ class Goal
 
     public void DisplayList()
     {
-        Console.WriteLine($"[] {_goalName}");
-        Console.WriteLine();
+        foreach(Goal goal in _goals)
+        {
+            Console.WriteLine($"[] {_goalName}");
+            Console.WriteLine();
+        }
     }
 
     public void SaveGoal(string filename)
