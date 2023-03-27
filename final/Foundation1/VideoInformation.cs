@@ -1,6 +1,6 @@
 using System;
 
-class Video 
+class VideoInformation
 {
     public string _title = "";
     public string _author = "";
