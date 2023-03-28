@@ -2,9 +2,9 @@ using System;
 
 class Product
 {
-    public int _productID = 0;
-    public int _productPrice = 0;
-    public int _productQuantity = 0;
+    public string _productID = "";
+    public string _productPrice = "";
+    public string _productQuantity = "";
 
     public void GetProductInfo()
     {

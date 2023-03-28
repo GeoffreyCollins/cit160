@@ -10,15 +10,15 @@ class Order
     {
         Product product = new Product();
         Console.Write("What is the name of the product? ");
-        int productIDInput = Convert.ToInt32(Console.ReadLine());
+        string productIDInput = Console.ReadLine();
         Console.Write("What is the price of the product? ");
-        int productQuantity = Convert.ToInt32(Console.ReadLine());
+        string productQuantity = Console.ReadLine();
         Console.Write("What is the price of the product? ");
-        int productPriceInput = Convert.ToInt32(Console.ReadLine());
+        string productPriceInput = Console.ReadLine();
         product._productID = productIDInput;
         product._productPrice = productPriceInput;
         product._productQuantity = productQuantity;
-        float productPrice = productPriceInput * productQuantity;
+        int productPrice = Convert.ToInt32(productPriceInput) * Convert.ToInt32(productQuantity);
         product.GetProductInfo();
     }
     public void AddCustomer(Customer customer)

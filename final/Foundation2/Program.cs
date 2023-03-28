@@ -21,7 +21,7 @@ class Program
                     order.GetProductInfo();
                     break;
                 case 0:
-
+                    Console.WriteLine("Thank you for using the order program!");
                     break;
             }
         }
