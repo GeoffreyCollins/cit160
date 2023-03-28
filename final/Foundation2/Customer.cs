@@ -6,15 +6,15 @@ class Customer
     public void GetCustomerInfo()
     {   
         Address address = new Address();
-        Console.Write("What is your name?");
+        Console.Write("What is your name? ");
         string nameInput = Console.ReadLine();
-        Console.Write("What is your street address?");
+        Console.Write("What is your street address? ");
         string addressInput = Console.ReadLine();
-        Console.Write("What city do you live in?");
+        Console.Write("What city do you live in? ");
         string cityInput = Console.ReadLine();
-        Console.Write("What state/province do you live in?");
+        Console.Write("What state/province do you live in? ");
         string stateInput = Console.ReadLine();
-        Console.Write("What country do you live in?");
+        Console.Write("What country do you live in? ");
         address._streetAddress = addressInput;
         address._city = cityInput;
         address._state = stateInput;
