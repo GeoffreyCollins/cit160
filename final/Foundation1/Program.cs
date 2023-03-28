@@ -4,7 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        VideoInformation videoInfo = new VideoInformation();
         Video video = new Video();
         Comment comment = new Comment();
 
