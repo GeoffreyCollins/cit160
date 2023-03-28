@@ -19,7 +19,7 @@ class Order
         product._productPrice = productPriceInput;
         product._productQuantity = productQuantity;
         float productPrice = productPriceInput * productQuantity;
-        Console.WriteLine($"Product: {productIDInput} - Price: {productPrice} - Quantity: {productQuantity}");
+        product.GetProductInfo();
     }
     public void AddCustomer(Customer customer)
     {

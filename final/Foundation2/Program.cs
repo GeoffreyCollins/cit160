@@ -18,7 +18,7 @@ class Program
             {
                 case 1:
                     customer.GetCustomerInfo();
-                    product.GetProductInfo();
+                    order.GetProductInfo();
                     break;
                 case 0:
 
