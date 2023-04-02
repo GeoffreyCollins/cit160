@@ -9,16 +9,16 @@ class Activity
         Console.WriteLine("2. Stationary Bike");
         Console.WriteLine("3. Swimming Laps");
 
-        Console.Write("Which activity did you participate in?");
+        Console.Write("Which activity did you participate in? ");
         string typeActivity = Console.ReadLine();
 
-        Console.Write("What was the date of this activity?");
+        Console.Write("What was the date of this activity? ");
         string dateInput = Console.ReadLine();
 
-        Console.Write("How long did you participate (in minutes)?");
+        Console.Write("How long did you participate (in minutes)? ");
         int durationInput = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("What was the distance that you accumulated during this activity (in miles)?");
+        Console.Write("What was the distance that you accumulated during this activity (in miles)? ");
         int distanceInput = Convert.ToInt32(Console.ReadLine());
 
         float speed = (distanceInput / durationInput) * 60;
