@@ -2,7 +2,7 @@ using System;
 
 class Lecture : Event
 {
-    public Lecture(string desc) : base("Foundations of the Restoration",
+    public Lecture() : base("Foundations of the Restoration",
                                         "Lecture on the beginnings of the Restoration of the Church of Jesus Christ of Latter-Day Saints",
                                         "April 03, 2023",
                                         "11:15",
