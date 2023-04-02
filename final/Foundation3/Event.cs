@@ -21,4 +21,9 @@ class Event
         _time = time;
         _address = address;
     }
+
+    public void DisplayEvent()
+    {
+        Console.WriteLine($"Title: {_title} - Description: {_desc} - Date + Time: {_date} - {_time} - Address: {_address}");
+    }
 }
